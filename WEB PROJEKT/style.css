@@ -1,0 +1,134 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* VIDEO */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    z-index: -1;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(30, 50, 30, 0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(100,150,100,0.3);
+    -webkit-backdrop-filter: blur(10px);
+
+
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 0;
+}
+
+/* LOGO */
+.logo a{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAV LINKS */
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* GREEN BAR */
+.green-bar {
+    height: 10px;
+    background: #264629;
+}
+
+/* PROFILE SECTION */
+.profile {
+    transform: translateY(-10px);
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+/* AVATAR */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #264629;
+    background: url("leopard2a8.jpg") center/cover;
+
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* TEXT */
+.profile h1 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.profile p {
+    color: #555;
+}

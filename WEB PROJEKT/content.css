@@ -1,0 +1,259 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: white;
+}
+
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(30, 50, 30, 0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(100,150,100,0.3);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo a {
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: white
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a.active {
+    color: orange;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO TEXT */
+.hero-text {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    max-width: 800px;
+    margin: auto;
+    color: #1a1a1a;
+}
+
+/* LINE */
+.separator {
+    height: 4px;
+    background: linear-gradient(to right, transparent, #2e5f3e, transparent);
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.reverse .row {
+    flex-direction: row-reverse;
+}
+
+/* PREVIEW */
+.preview {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.preview img {
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+}
+
+.preview:hover img {
+    transform: scale(1.08);
+}
+
+/* MULTI PREVIEW */
+.multi {
+    display: flex;
+    gap: 10px;
+}
+
+.multi img {
+    width: 50%;
+}
+
+/* CARD */
+.card {
+    flex: 1;
+    background: #e0dfdf;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 10px 0;
+    line-height: 1.6;
+    text-shadow: 0px 0px 8px rgba(26, 26, 26, 0.85);
+}
+
+/* BUTTON */
+.btnYT {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgb(255, 8, 0);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.card .yt {
+    text-shadow: 0px 0px 8px rgb(255, 33, 33, 0.5);
+}
+.btnTT {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.card .tt {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.card .tt::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(#20ecec, #ff13c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transform: translate(0px, 0px);
+    filter: blur(2px);
+
+    z-index: -1; /* MUSÍ být pod textem */
+}
+
+    
+.btnKI {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(4, 206, 24), rgb(0, 255, 26)) ;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.card .ki {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.card .ki::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(rgb(4, 206, 24), rgb(0, 255, 26));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transform: translate(0px, 0px);
+    filter: blur(2px);
+
+    z-index: -1; /* MUSÍ být pod textem */
+}
+.btnIG {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.card .ig {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.card .ig::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(#833ab4,#fd1d1d,#fcb045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transform: translate(0px, 0px);
+    filter: blur(2px);
+
+    z-index: -1; /* MUSÍ být pod textem */
+}
+
+.btn:hover {
+    background: white;
+}
