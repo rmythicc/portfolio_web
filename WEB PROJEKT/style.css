@@ -129,14 +129,18 @@ nav a:hover::after {
 }
 
 .quick-section {
-    padding: 100px 0;
+    padding: 120px 0;
+}
+
+.quick-section:last-of-type{
+    padding-bottom: 150px;
 }
 
 .quick-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 100px;
+    justify-content: center;
 }
 
 
@@ -151,6 +155,11 @@ nav a:hover::after {
 
 .quick-text {
     max-width: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 
 .quick-text p {
@@ -174,10 +183,11 @@ nav a:hover::after {
 }
 
 .quick-preview {
-    width: 400px;
-    height: 400px;
+    max-width: 400px;
+    flex: 1;
+    aspect-ratio: 1/1;
     border-radius: 12px;
-    overflow: hidden; /* 🔥 KLÍČOVÉ */
+    overflow: hidden;
     border: 4px solid white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
